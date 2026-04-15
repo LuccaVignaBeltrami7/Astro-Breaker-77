@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Breaker 77</title>
+    <meta name="description" content="Um jogo no estilo arcade/ação 2D para navegador. Sobreviva a ondas de inimigos neste shooter retrô!">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="crt-overlay"></div>
+        <div id="hud" class="hidden">
+            <div class="hud-item">PONTOS: <span id="score">0</span></div>
+            <div class="hud-item">FASE: <span id="level">1</span></div>
+            <div class="hud-item">VIDAS: <span id="lives">3</span></div>
+        </div>
+        <div id="powerup-display" class="hidden">POWER-UP ATIVO</div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <div id="start-screen" class="overlay">
+            <h1>ASTRO BREAKER 77</h1>
+            <p>Pressione <span class="highlight">ENTER</span> para Iniciar</p>
+            <div class="controls">
+                <p>Controles (Teclado):</p>
+                <p><span class="highlight">&larr; &rarr;</span> ou <span class="highlight">A D</span> : Mover Nave</p>
+                <p><span class="highlight">ESPAÇO</span> : Atirar</p>
+            </div>
+            <p style="margin-top:20px; font-size:10px; color:var(--text-color); opacity: 0.7;">Prepare-se para defender a galáxia!</p>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 class="game-over-text">GAME OVER</h1>
+            <p>PONTUAÇÃO FINAL: <span id="final-score" class="highlight">0</span></p>
+            <p>FASE ALCANÇADA: <span id="final-level" class="highlight">1</span></p>
+            <p class="blink" style="margin-top:20px">Pressione <span class="highlight">ENTER</span> para Reiniciar</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
